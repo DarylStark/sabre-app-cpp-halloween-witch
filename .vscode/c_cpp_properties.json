@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/components/**",
+                "${env:IDF_PATH}/components/**",
+                "/home/developer/esp/esp-idf/components/xtensa/include/xtensa/"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/",
+                    // "${env:IDF_PATH}/components"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

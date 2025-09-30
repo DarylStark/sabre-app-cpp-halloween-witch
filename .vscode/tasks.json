@@ -1,0 +1,99 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Stop all Python processes",
+			"command": "bash",
+			"args": [
+				"-c",
+				"killall python || true"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "none",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Full clean",
+			"command": "idf.py",
+			"args": [
+				"fullclean"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "none",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Menuconfig",
+			"command": "idf.py",
+			"args": [
+				"menuconfig"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "none",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Build",
+			"command": "idf.py",
+			"args": [
+				"build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Flash",
+			"command": "idf.py",
+			"args": [
+				"flash"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "Monitor",
+			"command": "idf.py",
+			"args": [
+				"monitor"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Build / Flash / Monitor",
+			"dependsOn": [
+				"Stop all Python processes",
+				"Build",
+				"Flash",
+				"Monitor"
+			],
+			"dependsOrder": "sequence",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		}
+	]
+}

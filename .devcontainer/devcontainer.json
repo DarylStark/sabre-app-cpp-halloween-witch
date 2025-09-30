@@ -1,0 +1,14 @@
+{
+    "name": "Sabre Witch",
+    "image": "dast1986/slough-dev-dc-esp32:latest",
+    "remoteEnv": {
+        "PROMPTNAME": "SABRE-WITCH",
+        "LC_ALL": "C.UTF-8"
+    },
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    "runArgs": [
+        "--device=/dev/ttyUSB0"
+    ]
+}
