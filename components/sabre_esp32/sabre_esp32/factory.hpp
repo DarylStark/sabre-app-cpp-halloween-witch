@@ -5,6 +5,7 @@
 #include "clients/ntp.hpp"
 #include "gpio/input_gpio.hpp"
 #include "gpio/output_gpio.hpp"
+#include "system/wall_clock.hpp"
 #include "uart/uart.hpp"
 #include "utility/wait_for.hpp"
 #include "wifi/wifi_soft_ap.hpp"

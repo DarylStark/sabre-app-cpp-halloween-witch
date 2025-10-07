@@ -52,11 +52,11 @@ namespace sabre::esp32
 
     sabre::WallClockSharedPtr Factory::create_wall_clock() const
     {
-        return nullptr;
+        return std::make_shared<WallClock>();
     }
 
     sabre::ServiceSharedPtr Factory::create_service(ServiceHandler fn) const
     {
-        return nullptr;
+        return std::make_shared<Service>(fn);
     }
 } // namespace sabre::esp32
