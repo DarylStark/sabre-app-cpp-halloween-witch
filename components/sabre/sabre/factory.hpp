@@ -97,13 +97,6 @@ namespace sabre
         virtual WifiSoftAPSharedPtr create_wifi_soft_ap() const = 0;
 
         /**
-         * @brief Create a `MQTTClient` object.
-         *
-         * @return A `MQTTClientSharedPtr` shared pointer to a `MQTTClient`
-         * object.
-         */
-
-        /**
          * @brief Create a `WallClock` object.
          *
          * @return A `WallClockSharedPtr` shared pointer to a `WallClock`
