@@ -9,6 +9,6 @@
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
     ],
     "runArgs": [
-        "--device=/dev/ttyUSB0"
+        "--device=/dev/ttyACM0"
     ]
 }

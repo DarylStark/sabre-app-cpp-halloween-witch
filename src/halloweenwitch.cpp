@@ -18,6 +18,7 @@ namespace
                         const uint8_t *data, int len)
     {
         int value = 1;
+        std::cout << "Received ESP-NOW message of length " << len << std::endl;
         xQueueSend(global_queue, &value, portMAX_DELAY);
     }
 } // namespace
@@ -37,6 +38,7 @@ void HalloweenWitch::start()
 {
     _init_button();
     _init_esp_now();
+    _last_press_time = esp_timer_get_time();
     _service->start();
 }
 
@@ -83,13 +85,17 @@ void HalloweenWitch::_activate_witch()
 {
     int64_t current_time = esp_timer_get_time();
     if (current_time - _last_press_time < 4000000)
+    {
+        std::cout << "Skipping: " << _button->get_level() << std::endl;
         return;
+    }
+    std::cout << "Activated!" << std::endl;
 
     _witch->set_level(true);
-    vTaskDelay(pdMS_TO_TICKS(100)); // 100 ms
+    vTaskDelay(pdMS_TO_TICKS(500)); // 100 ms
     _witch->set_level(false);
 
-    _last_press_time = current_time;
+    _last_press_time = esp_timer_get_time();
 }
 
 void HalloweenWitch::_service_activate_witch()
