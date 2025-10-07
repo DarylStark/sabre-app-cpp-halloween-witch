@@ -103,7 +103,26 @@ namespace sabre::esp32
          *
          * @returns A `NTPClientSharedPtr` shared pointer to a `NTPClient`.
          */
-        NTPClientSharedPtr create_ntp_client(const std::string &server) const;
+        sabre::NTPClientSharedPtr
+        create_ntp_client(const std::string &server) const;
+
+        /**
+         * @brief Create a `WallClock` object.
+         *
+         * @return A `WallClockSharedPtr` shared pointer to a `WallClock`
+         * object.
+         */
+        sabre::WallClockSharedPtr create_wall_clock() const;
+
+        /**
+         * @brief Create a `Service` object.
+         *
+         * @param fn the function to run as the service.
+         *
+         * @return A `ServiceSharedPtr` shared pointer to a `Service`
+         * object.
+         */
+        sabre::ServiceSharedPtr create_service(ServiceHandler fn) const;
     };
 } // namespace sabre::esp32
 

@@ -4,7 +4,7 @@
 
 namespace sabre::esp32
 {
-    uint64_t WallClock::now_ms()
+    uint64_t WallClock::now_ms() const
     {
         timeval tv;
         gettimeofday(&tv, nullptr);

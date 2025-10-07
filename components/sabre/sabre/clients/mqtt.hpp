@@ -159,7 +159,7 @@ namespace sabre
         /**
          * @brief Return if the client is connected.
          *
-         * @returns `true` if it is connected, otherwise `false`.
+         * @return `true` if it is connected, otherwise `false`.
          */
         virtual bool is_connected() const = 0;
 
@@ -211,7 +211,7 @@ namespace sabre
          *
          * @param topic_name the topic for the MQTTTopic object.
          *
-         * @returns A `MQTTTopicUniquePtr` unique pointer to a `MQTTTopic`
+         * @return A `MQTTTopicUniquePtr` unique pointer to a `MQTTTopic`
          * object.
          */
         MQTTTopicUniquePtr get_topic(const std::string &topic_name);

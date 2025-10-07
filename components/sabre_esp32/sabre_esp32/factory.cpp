@@ -49,4 +49,14 @@ namespace sabre::esp32
     {
         return std::make_shared<NTPClient>(server);
     }
+
+    sabre::WallClockSharedPtr Factory::create_wall_clock() const
+    {
+        return nullptr;
+    }
+
+    sabre::ServiceSharedPtr Factory::create_service(ServiceHandler fn) const
+    {
+        return nullptr;
+    }
 } // namespace sabre::esp32

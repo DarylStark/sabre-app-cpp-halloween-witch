@@ -46,7 +46,7 @@ namespace sabre
          * This method is called when the connected `std::ostream` object tries
          * to write a sequence of characters to the stream buffer.
          *
-         * @returns Zero at all times.
+         * @return Zero at all times.
          */
         int sync() override;
 
