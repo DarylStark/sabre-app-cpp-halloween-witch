@@ -66,6 +66,7 @@ void HalloweenWitch::_init_esp_now()
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_start());
+    ESP_ERROR_CHECK(esp_wifi_set_channel(1, WIFI_SECOND_CHAN_NONE));
 
     // Initialize ESP-NOW after Wi-Fi is started
     ESP_ERROR_CHECK(esp_now_init());
