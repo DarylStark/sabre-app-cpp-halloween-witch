@@ -20,7 +20,7 @@ namespace sabre::esp32
          *
          * @return The current time since 1970-01-01 00:00:00 in milliseconds.
          */
-        uint64_t now_ms() override;
+        uint64_t now_ms() const override;
 
         /**
          * @brief Set the current time in ms since 1970-01-01

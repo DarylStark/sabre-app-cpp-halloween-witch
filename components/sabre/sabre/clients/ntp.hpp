@@ -2,7 +2,6 @@
 #define SABRE_CLIENTS_NTP_HPP
 
 #include <memory>
-#include <string>
 
 namespace sabre
 {
